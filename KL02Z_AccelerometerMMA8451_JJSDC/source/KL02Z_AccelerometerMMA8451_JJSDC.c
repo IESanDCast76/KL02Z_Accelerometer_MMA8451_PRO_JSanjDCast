@@ -56,25 +56,25 @@
 int main(void) {
 	status_t status;
 		uint8_t new_byte_uart;
-		//uint8_t	new_dato_i2c;
+		//uint16_t	new_dato_i2c;
 
-		uint8_t new_data_i2c;
-		uint8_t new_data_i2c_status_read;
-		uint8_t new_data_i2c_status_write;
+		uint16_t new_data_i2c;
+		uint16_t new_data_i2c_status_read;
+		uint16_t new_data_i2c_status_write;
 		uint8_t status0_value_buff = 0;
 
-		uint8_t new_data_i2c_axis_X_MSB;
-		uint8_t new_data_i2c_axis_x_LSB;
+		uint16_t new_data_i2c_axis_X_MSB;
+		uint16_t new_data_i2c_axis_x_LSB;
 
-		uint8_t new_data_i2c_axis_Y_MSB;
-		uint8_t new_data_i2c_axis_y_LSB;
+		uint16_t new_data_i2c_axis_Y_MSB;
+		uint16_t new_data_i2c_axis_y_LSB;
 
-		uint8_t new_data_i2c_axis_Z_MSB;
-		uint8_t new_data_i2c_axis_z_LSB;
+		uint16_t new_data_i2c_axis_Z_MSB;
+		uint16_t new_data_i2c_axis_z_LSB;
 
-		uint8_t new_data_i2c_axis_X_value;
-		uint8_t new_data_i2c_axis_Y_value;
-		uint8_t new_data_i2c_axis_Z_value;
+		uint16_t new_data_i2c_axis_X_value;
+		uint16_t new_data_i2c_axis_Y_value;
+		uint16_t new_data_i2c_axis_Z_value;
 
 
   	/* Init board hardware. */
