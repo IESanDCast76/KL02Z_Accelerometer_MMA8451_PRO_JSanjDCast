@@ -72,6 +72,10 @@ int main(void) {
 		uint8_t new_data_i2c_axis_Z_MSB;
 		uint8_t new_data_i2c_axis_z_LSB;
 
+		uint8_t new_data_i2c_axis_X_value;
+		uint8_t new_data_i2c_axis_Y_value;
+		uint8_t new_data_i2c_axis_Z_value;
+
 
   	/* Init board hardware. */
     BOARD_InitBootPins();
@@ -140,6 +144,11 @@ int main(void) {
 				printf("Axis Value X MSB: %d\r\n", new_data_i2c_axis_X_MSB);
 				printf("Axis Value x LSB: %d\r\n", new_data_i2c_axis_x_LSB);
 
+				new_data_i2c_axis_X_MSB <<= 8;
+				new_data_i2c_axis_X_value = new_data_i2c_axis_X_MSB | new_data_i2c_axis_x_LSB;
+				new_data_i2c_axis_X_value >>= 2;
+				printf("Axis Value X: %d\r\n", new_data_i2c_axis_X_value);
+
 				break;
 
 				case 'y':
@@ -155,6 +164,11 @@ int main(void) {
 				printf("Axis Value Y MSB: %d\r\n", new_data_i2c_axis_Y_MSB);
 				printf("Axis Value y LSB: %d\r\n", new_data_i2c_axis_y_LSB);
 
+				new_data_i2c_axis_Y_MSB <<= 8;
+				new_data_i2c_axis_Y_value = new_data_i2c_axis_Y_MSB | new_data_i2c_axis_y_LSB;
+				new_data_i2c_axis_Y_value >>= 2;
+				printf("Axis Value Y: %d\r\n", new_data_i2c_axis_Y_value);
+
 				break;
 
 				case 'z':
@@ -169,6 +183,11 @@ int main(void) {
 				printf("Status Value: %d\r\n", new_data_i2c_status_read);
 				printf("Axis Value Z MSB: %d\r\n", new_data_i2c_axis_Z_MSB);
 				printf("Axis Value z LSB: %d\r\n", new_data_i2c_axis_z_LSB);
+
+				new_data_i2c_axis_Z_MSB <<= 8;
+				new_data_i2c_axis_Z_value = new_data_i2c_axis_Z_MSB | new_data_i2c_axis_z_LSB;
+				new_data_i2c_axis_Z_value >>= 2;
+				printf("Axis Value Z: %d\r\n", new_data_i2c_axis_Z_value);
 
 				break;
 
